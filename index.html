@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orhia Systems | Human-Centered AI Orchestration</title>
+<meta name="description" content="Nous transformons les processus métier chronophages en systèmes automatisés augmentés par l'IA, où l'humain garde le contrôle sur ce qui compte.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orhia Systems | Human-Centered AI Orchestration">
+<meta property="og:description" content="Nous transformons les processus métier chronophages en systèmes automatisés augmentés par l'IA, où l'humain garde le contrôle sur ce qui compte.">
+<meta property="og:image" content="assets/orhia-lockup.webp">
+<meta property="og:url" content="https://orhia.systems/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orhia Systems | Human-Centered AI Orchestration">
+<meta name="twitter:description" content="Nous transformons les processus métier chronophages en systèmes automatisés augmentés par l'IA, où l'humain garde le contrôle sur ce qui compte.">
+<meta name="twitter:image" content="assets/orhia-lockup.webp">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+
+ :root {
+ /* Dark palette (hero only) */
+ --navy-deep: #010816;
+ --navy: #0c1928;
+ --navy-panel: #0f1e32;
+ --steel-100: #f3f5f7;
+ --steel-300: #c7ced8;
+ --steel-500: #8a94a3;
+ --steel-700: #4d5665;
+ --gold: #c6a15b;
+ --gold-bright: #e2c07e;
+ --gold-dim: #7a6534;
+ --hairline: rgba(198, 161, 91, 0.18);
+ --hairline-soft: rgba(199, 206, 216, 0.1);
+
+ /* Light palette (rest of the site) */
+ --light-bg: #d2dced;
+ --panel: #ffffff;
+ --panel-alt: #e9edf3;
+ --ink: #142338;
+ --ink-muted: #55606f;
+ --ink-faint: #8993a3;
+ --gold-ink: #8a6423;
+ --hairline-light: rgba(16, 31, 51, 0.12);
+ --hairline-gold-light: rgba(198, 161, 91, 0.5);
+ }
+
+ * { box-sizing: border-box; }
+
+ html { scroll-behavior: smooth; font-size: 106.25%; }
+
+ body {
+ margin: 0;
+ background: var(--light-bg);
+ color: var(--ink-muted);
+ font-family: 'Manrope', sans-serif;
+ font-weight: 400;
+ line-height: 1.65;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+ }
+
+ a { color: inherit; }
+
+ h1, h2, h3 {
+ font-family: 'Cinzel', serif;
+ font-weight: 500;
+ color: var(--ink);
+ margin: 0;
+ text-wrap: balance;
+ }
+
+ .hero-statement {
+ text-wrap: balance;
+ }
+
+ .hero-sub,
+ .manifesto-inline,
+ .case-line p,
+ .contact-lede,
+ .closing p {
+ text-wrap: pretty;
+ }
+
+ .eyebrow {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--ink-muted);
+ font-weight: 600;
+ }
+
+ .wrap {
+ max-width: 1120px;
+ margin: 0 auto;
+ padding: 0 32px;
+ }
+
+ ::selection { background: var(--gold-dim); color: #fff; }
+
+ a:focus-visible, button:focus-visible {
+ outline: 2px solid var(--gold-ink);
+ outline-offset: 3px;
+ }
+
+ .skip-link {
+ position: absolute;
+ left: -9999px;
+ top: 0;
+ background: var(--panel);
+ color: var(--ink);
+ padding: 12px 20px;
+ z-index: 1000;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.85rem;
+ text-decoration: none;
+ border-radius: 0 0 3px 0;
+ }
+
+ .skip-link:focus {
+ left: 0;
+ }
+
+ /* ---------- background texture (light sections) ---------- */
+ body {
+ background-image:
+ radial-gradient(ellipse 900px 500px at 15% -5%, rgba(198,161,91,0.07), transparent 60%),
+ radial-gradient(ellipse 700px 500px at 90% 12%, rgba(16,31,51,0.035), transparent 60%);
+ background-repeat: no-repeat;
+ }
+
+ /* ---------- HERO (stays dark) ---------- */
+ .hero {
+ position: relative;
+ padding: 88px 0 120px;
+ text-align: center;
+ background: var(--navy-deep);
+ color: var(--steel-300);
+ border-bottom: 1px solid var(--hairline);
+ overflow: hidden;
+ }
+
+ .hero-lockup-wrap {
+ max-width: 620px;
+ margin: 0 auto 12px;
+ padding: 0 24px;
+ box-sizing: border-box;
+ }
+
+ .hero-lockup {
+ width: 100%;
+ height: auto;
+ display: block;
+ margin: 0;
+ }
+
+ .hero-statement {
+ font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+ line-height: 1.28;
+ max-width: 780px;
+ margin: 48px auto 24px;
+ letter-spacing: 0.01em;
+ color: var(--steel-100);
+ }
+
+ .hero-statement em {
+ font-style: normal;
+ color: var(--gold-bright);
+ }
+
+ .line-atom {
+ white-space: nowrap;
+ }
+
+ @media (max-width: 480px) {
+ .line-atom { white-space: normal; }
+ }
+
+ .hero-sub {
+ max-width: 560px;
+ margin: 0 auto 40px;
+ color: var(--steel-500);
+ font-size: 1.08rem;
+ }
+
+ .underline-accent {
+ text-decoration: underline;
+ text-decoration-color: var(--gold);
+ text-decoration-thickness: 1px;
+ text-underline-offset: 4px;
+ }
+
+ .cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+ .btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 13px 26px;
+ border-radius: 8px;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.84rem;
+ letter-spacing: 0.06em;
+ text-decoration: none;
+ border: 1px solid var(--hairline);
+ transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+ }
+
+ .btn-primary {
+ background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+ color: var(--navy-deep);
+ border-color: transparent;
+ font-weight: 600;
+ }
+ .btn-primary:hover { filter: brightness(1.08); }
+
+ .btn-ghost { color: var(--steel-300); }
+ .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+ /* ---------- MANIFESTO ---------- */
+ .manifesto-inline {
+ max-width: 700px;
+ margin: 0 auto 72px;
+ font-size: 1.24rem;
+ color: var(--ink-muted);
+ line-height: 1.68;
+ text-align: center;
+ }
+
+ .manifesto-inline strong { color: var(--ink); font-weight: 700; }
+
+ /* ---------- CASE STUDIES SPINE ---------- */
+ .studies {
+ position: relative;
+ padding: 100px 0 60px;
+ scroll-margin-top: 24px;
+ }
+
+ .studies-head {
+ text-align: center;
+ margin-bottom: 88px;
+ }
+
+ .studies-head h2 {
+ font-size: clamp(1.5rem, 2.6vw, 2rem);
+ margin-top: 10px;
+ }
+
+ .studies-disclaimer {
+ position: relative;
+ max-width: 480px;
+ margin: 32px auto 0;
+ padding: 16px 22px;
+ font-size: 0.86rem;
+ font-style: italic;
+ color: var(--ink-muted);
+ line-height: 1.6;
+ text-wrap: pretty;
+ background: rgba(198, 161, 91, 0.07);
+ border: 1px solid rgba(198, 161, 91, 0.22);
+ border-radius: 6px;
+ box-shadow: 0 10px 24px rgba(16, 31, 51, 0.08), 0 2px 6px rgba(16, 31, 51, 0.05);
+ transform: rotate(-1.1deg);
+ transition: transform 0.25s ease, box-shadow 0.25s ease;
+ }
+
+ .studies-disclaimer:hover {
+ transform: rotate(0deg);
+ box-shadow: 0 14px 30px rgba(16, 31, 51, 0.1), 0 3px 8px rgba(16, 31, 51, 0.06);
+ }
+
+ .studies-disclaimer::before {
+ content: "";
+ position: absolute;
+ top: -7px;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 14px;
+ height: 14px;
+ border-radius: 50%;
+ background: radial-gradient(circle at 35% 35%, var(--gold-bright), var(--gold-ink));
+ box-shadow: 0 2px 4px rgba(16, 31, 51, 0.25);
+ }
+
+ .spine {
+ position: relative;
+ max-width: 980px;
+ margin: 0 auto;
+ }
+
+ .spine::before {
+ content: "";
+ position: absolute;
+ left: 50%;
+ top: 8px;
+ bottom: 8px;
+ width: 1px;
+ background: linear-gradient(180deg, transparent, var(--hairline-gold-light) 8%, var(--hairline-gold-light) 92%, transparent);
+ transform: translateX(-50%);
+ }
+
+ .case {
+ position: relative;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 0 72px;
+ margin-bottom: 104px;
+ }
+
+ .case:last-child { margin-bottom: 0; }
+
+ .case-node {
+ position: absolute;
+ left: 50%;
+ top: 6px;
+ width: 11px;
+ height: 11px;
+ border-radius: 50%;
+ background: var(--light-bg);
+ border: 2px solid var(--gold-ink);
+ transform: translateX(-50%);
+ box-shadow: 0 0 0 6px var(--light-bg), 0 0 14px rgba(198,161,91,0.4);
+ }
+
+ .case-copy { grid-column: 1; grid-row: 1; text-align: right; padding-right: 8px; }
+ .case-media { grid-column: 2; grid-row: 1; padding-left: 8px; }
+
+ .case.reverse .case-copy { grid-column: 2; grid-row: 1; text-align: left; padding-right: 0; padding-left: 8px; }
+ .case.reverse .case-media { grid-column: 1; grid-row: 1; padding-left: 0; padding-right: 8px; }
+
+ .case-eyebrow {
+ display: block;
+ margin-bottom: 14px;
+ }
+
+ .case h3 {
+ font-size: 1.5rem;
+ margin-bottom: 18px;
+ line-height: 1.3;
+ }
+
+ .case-line {
+ margin: 0 0 14px;
+ font-size: 1.02rem;
+ }
+
+ .case-line .tag {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.7rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ color: var(--ink);
+ font-weight: 600;
+ display: block;
+ margin-bottom: 4px;
+ }
+
+ .case-line.problem .tag { color: var(--ink-muted); }
+ .case-line p { margin: 0; color: var(--ink-muted); }
+
+ .case-arch {
+ margin-top: 18px;
+ padding-top: 16px;
+ border-top: 1px solid var(--hairline-light);
+ font-size: 0.92rem;
+ color: var(--ink-muted);
+ font-style: normal;
+ }
+
+ .sectors {
+ margin-top: 18px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ justify-content: flex-end;
+ }
+
+ .case.reverse .sectors { justify-content: flex-start; }
+
+ .pill {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.72rem;
+ letter-spacing: 0.03em;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ border-radius: 20px;
+ padding: 4px 11px;
+ }
+
+ /* video frame */
+ .video-frame {
+ position: relative;
+ aspect-ratio: 16/9;
+ border: 1px solid var(--hairline-light);
+ background: var(--panel-alt);
+ border-radius: 14px;
+ cursor: pointer;
+ transition: border-color 0.2s ease, transform 0.2s ease;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ }
+
+ .video-frame:hover {
+ border-color: var(--hairline-gold-light);
+ transform: translateY(-2px);
+ }
+
+ .video-frame::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(135deg, rgba(198,161,91,0.08), transparent 55%);
+ }
+
+ .video-placeholder {
+ position: relative;
+ text-align: center;
+ color: var(--ink-muted);
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ }
+
+ .play-dot,
+ .play-dot-overlay {
+ width: 46px;
+ height: 46px;
+ margin: 0 auto 14px;
+ border-radius: 50%;
+ border: 1px solid var(--hairline-gold-light);
+ background: var(--panel);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .play-dot-overlay {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ margin: 0;
+ box-shadow: 0 8px 20px rgba(16, 31, 51, 0.25);
+ transition: transform 0.2s ease;
+ }
+
+ .video-frame:hover .play-dot-overlay {
+ transform: translate(-50%, -50%) scale(1.08);
+ }
+
+ .video-thumb {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
+ background: var(--navy-deep);
+ }
+
+ .play-dot svg,
+ .play-dot-overlay svg { width: 14px; height: 14px; fill: var(--gold-ink); }
+
+ /* ---------- VIDEO LIGHTBOX ---------- */
+ .video-lightbox {
+ position: fixed;
+ inset: 0;
+ z-index: 2000;
+ display: none;
+ align-items: center;
+ justify-content: center;
+ padding: 32px;
+ }
+
+ .video-lightbox.open { display: flex; }
+
+ .video-lightbox-backdrop {
+ position: absolute;
+ inset: 0;
+ background: rgba(1,8,22,0.82);
+ backdrop-filter: blur(3px);
+ }
+
+ .video-lightbox-panel {
+ position: relative;
+ width: 100%;
+ max-width: 960px;
+ background: var(--navy-deep);
+ border: 1px solid var(--hairline);
+ border-radius: 14px;
+ overflow: hidden;
+ box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+ }
+
+ .video-lightbox-head {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 16px 22px;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.82rem;
+ letter-spacing: 0.04em;
+ color: var(--steel-300);
+ border-bottom: 1px solid var(--hairline);
+ }
+
+ .video-lightbox-close {
+ background: none;
+ border: none;
+ color: var(--steel-300);
+ font-size: 1.6rem;
+ line-height: 1;
+ cursor: pointer;
+ padding: 0 4px;
+ }
+
+ .video-lightbox-close:hover { color: var(--gold-bright); }
+
+ .video-lightbox-body {
+ aspect-ratio: 16/9;
+ background: var(--navy);
+ }
+
+ .video-lightbox-body iframe,
+ .video-lightbox-body video {
+ width: 100%;
+ height: 100%;
+ border: 0;
+ display: block;
+ }
+
+ .video-lightbox-body .video-placeholder {
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+
+ /* ---------- STACK STRIP ---------- */
+ .stack {
+ padding: 64px 0 88px;
+ text-align: center;
+ border-top: 1px solid var(--hairline-light);
+ }
+
+ .stack-label {
+ display: block;
+ margin-bottom: 20px;
+ }
+
+ .stack-items {
+ display: flex;
+ justify-content: center;
+ gap: 14px;
+ flex-wrap: wrap;
+ }
+
+ .stack-items span {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.86rem;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ padding: 7px 16px;
+ border-radius: 8px;
+ }
+
+ /* ---------- CLOSING ---------- */
+ .closing {
+ padding: 110px 0;
+ text-align: center;
+ background: var(--navy-deep);
+ color: var(--steel-300);
+ border-top: 1px solid var(--hairline);
+ }
+
+ .closing-icon {
+ width: 64px;
+ height: auto;
+ opacity: 0.9;
+ margin: 0 auto 32px;
+ display: block;
+ }
+
+ .closing h2 {
+ font-size: clamp(1.4rem, 2.6vw, 2rem);
+ max-width: 960px;
+ margin: 0 auto 20px;
+ line-height: 1.35;
+ color: var(--steel-100);
+ }
+
+ .closing h2 em {
+ font-style: normal;
+ color: var(--gold-bright);
+ }
+
+ .closing p {
+ max-width: 480px;
+ margin: 0 auto;
+ color: var(--steel-500);
+ font-size: 1.02rem;
+ }
+
+ /* ---------- CONTACT ---------- */
+ .contact-panel {
+ padding: 140px 0;
+ min-height: 60vh;
+ display: flex;
+ align-items: center;
+ scroll-margin-top: 24px;
+ }
+
+ .contact-wrap {
+ max-width: 640px;
+ margin: 0 auto;
+ text-align: center;
+ }
+
+ .contact-panel h2 {
+ font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+ margin: 14px 0 22px;
+ }
+
+ .contact-lede {
+ font-size: 1.08rem;
+ color: var(--ink-muted);
+ max-width: 520px;
+ margin: 0 auto 44px;
+ text-wrap: pretty;
+ }
+
+ .contact-form-shell {
+ border: 1px solid var(--hairline-light);
+ border-radius: 14px;
+ padding: 32px 24px;
+ background: var(--panel);
+ }
+
+ .contact-form-shell iframe {
+ display: block;
+ }
+
+ /* ---------- FOOTER ---------- */
+ footer {
+ padding: 32px;
+ text-align: center;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.05em;
+ color: var(--ink-muted);
+ border-top: 1px solid var(--hairline);
+ }
+
+ footer .legal-footer-link {
+ display: block;
+ margin-top: 10px;
+ color: var(--ink-faint);
+ text-decoration: none;
+ }
+
+ footer .legal-footer-link:hover {
+ color: var(--gold-ink);
+ text-decoration: underline;
+ }
+
+ /* ---------- RESPONSIVE ---------- */
+ @media (max-width: 760px) {
+ .hero { padding: 72px 0 90px; }
+ .studies { padding: 72px 0 40px; }
+ .studies-head { margin-bottom: 56px; }
+
+ .spine::before { left: 17px; }
+
+ .case, .case.reverse {
+ grid-template-columns: 1fr;
+ gap: 24px;
+ margin-bottom: 72px;
+ padding-left: 44px;
+ }
+
+ .case-copy, .case.reverse .case-copy,
+ .case-media, .case.reverse .case-media {
+ grid-column: 1;
+ grid-row: auto;
+ text-align: left;
+ padding: 0;
+ }
+
+ .case-node { left: 17px; }
+
+ .sectors, .case.reverse .sectors { justify-content: flex-start; }
+
+ .closing { padding: 80px 0; }
+ }
+
+ /* ---- curtain navigation ---- */
+ #curtain-l,#curtain-r {
+   position:fixed;
+   top:0;bottom:0;
+   width:50%;
+   background:var(--navy-deep);
+   z-index:9999;
+   pointer-events:none;
+ }
+ #curtain-l{left:0;transform:translateX(-100%);}
+ #curtain-r{right:0;transform:translateX(100%);}
+ #curtain-l.animating,#curtain-r.animating{
+   transition:transform .45s cubic-bezier(.65,0,.35,1);
+ }
+ #curtain-l.closed{transform:translateX(0);}
+ #curtain-r.closed{transform:translateX(0);}
+ #page-contact{display:none;}
+
+</style>
+</head>
+<body>
+ <a href="#main" class="skip-link">Aller au contenu</a>
+
+ <main id="main">
+
+ <!-- ============ HERO ============ -->
+ <section class="hero">
+ <div class="hero-lockup-wrap">
+ <img class="hero-lockup" src="assets/orhia-lockup.webp" alt="Orhia Systems, Human-Centered AI Orchestration" width="1500" height="748">
+ </div>
+
+ <div class="wrap">
+
+ <h1 class="hero-statement">
+ <span class="line-atom">Des processus qui s'exécutent seuls.</span><br>
+ <span class="line-atom">Des décisions qui restent <em>les vôtres</em>.</span>
+ </h1>
+
+ <p class="hero-sub">
+ Nous transformons les tâches manuelles et chronophages <br> (traitement de documents,
+ demandes clients, reporting) <br>en systèmes automatisés augmentés par l'IA, 
+<br> où l'humain garde le contrôle sur ce qui compte <span class="underline-accent">vraiment</span>.
+ </p>
+
+ <div class="cta-row">
+ <a id="btn-real" class="btn btn-primary" href="#" onclick="switchPage('real');return false;">Voir les réalisations</a>
+ <a id="btn-contact" class="btn btn-ghost" href="#" onclick="switchPage('contact');return false;">Nous contacter</a>
+ </div>
+ </div>
+ </section>
+
+ <div id="curtain-l" aria-hidden="true"></div>
+ <div id="curtain-r" aria-hidden="true"></div>
+
+ <div id="stage">
+ <div id="page-real">
+
+ <!-- ============ CASE STUDIES ============ -->
+ <section class="studies" id="studies">
+ <div class="wrap">
+ <div class="studies-head">
+ <span class="eyebrow">Cinq systèmes</span>
+ <h2>Trier → Structurer → Exploiter → Evaluer → Agir</h2>
+ <p class="studies-disclaimer">
+ Par souci de confidentialité, les exemples présentés ci-dessous s'appuient sur des données fictives&nbsp;:
+ néanmoins, il s'agit exactement du type de systèmes déployés chez nos clients.
+ </p>
+ </div>
+
+ <p class="manifesto-inline">
+ <strong>Cinq systèmes, une même architecture.</strong> <br>Chacun répond à un problème
+ universel d'entreprise <br>(trier, structurer, exploiter, évaluer, agir) <br>tous construits
+ sur un principe non négociable&nbsp;: <strong><br>l'IA n'agit jamais seule sur ce qui engage
+ votre entreprise.</strong>
+ </p>
+
+ <div class="spine">
+
+ <!-- Case 1 - AI Inbox -->
+ <div class="case">
+ <div class="case-node"></div>
+ <div class="case-copy">
+ <span class="case-eyebrow eyebrow">01 · Trier</span>
+ <h3>Router les demandes entrantes</h3>
+
+ <div class="case-line problem">
+ <span class="tag">Problème</span>
+ <p>Des dizaines de demandes arrivent chaque jour <br>(email, formulaire, message
+ client) et chacune attend un tri manuel avant même d'être traitée.</p>
+ </div>
+
+ <div class="case-line">
+ <span class="tag">Solution</span>
+ <p>Chaque demande est comprise, classée et routée automatiquement vers la
+ bonne équipe. Les cas urgents sont toujours signalés à un humain.</p>
+ </div>
+
+ <div class="case-arch">
+ Un nœud de routage envoie chaque demande vers l'un de cinq chemins distincts,
+ une logique visuellement inspectable, jamais une boîte noire.
+ </div>
+
+ <div class="sectors">
+ <span class="pill">Hôtellerie</span>
+ <span class="pill">Immobilier</span>
+ <span class="pill">Banque</span>
+ <span class="pill">Assurance</span>
+ <span class="pill">E-commerce</span>
+ </div>
+ </div>
+
+ <div class="case-media">
+ <div class="video-frame" onclick="openVideoLightbox(this, 'AI Inbox')" role="button" tabindex="0">
+ <video class="video-thumb" muted playsinline preload="metadata">
+ <source src="assets/videos/1.mp4" type="video/mp4">
+ </video>
+ <div class="play-dot-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Case 2 - Document Intelligence -->
+ <div class="case reverse">
+ <div class="case-node"></div>
+ <div class="case-copy">
+ <span class="case-eyebrow eyebrow">02 · Structurer</span>
+ <h3>Transformer tout document en données exploitables</h3>
+
+ <div class="case-line problem">
+ <span class="tag">Problème</span>
+ <p>Factures, devis, CV, contrats : des heures perdues chaque semaine à
+ ressaisir des informations qui existent déjà, sur papier ou en PDF.</p>
+ </div>
+
+ <div class="case-line">
+ <span class="tag">Solution</span>
+ <p>Un document déposé devient une donnée structurée en quelques secondes,
+ avec contrôle humain automatique sur les montants sensibles.</p>
+ </div>
+
+ <div class="case-arch">
+ Le seuil de validation est calculé par du code, jamais par le modèle,
+ aucune ambiguïté sur la décision qui déclenche une vérification.
+ </div>
+
+ <div class="sectors">
+ <span class="pill">Comptabilité</span>
+ <span class="pill">RH</span>
+ <span class="pill">Juridique</span>
+ <span class="pill">Achats</span>
+ <span class="pill">Logistique</span>
+ </div>
+ </div>
+
+ <div class="case-media">
+ <div class="video-frame" onclick="openVideoLightbox(this, 'Document Intelligence')" role="button" tabindex="0">
+ <video class="video-thumb" muted playsinline preload="metadata">
+ <source src="assets/videos/2.mp4" type="video/mp4">
+ </video>
+ <div class="play-dot-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Case 3 - Knowledge Assistant -->
+ <div class="case">
+ <div class="case-node"></div>
+ <div class="case-copy">
+ <span class="case-eyebrow eyebrow">03 · Exploiter</span>
+ <h3>Interroger la connaissance interne, sans jamais inventer</h3>
+
+ <div class="case-line problem">
+ <span class="tag">Problème</span>
+ <p>L'information existe quelque part dans vos procédures internes, mais
+ la retrouver prend souvent plus de temps que de la redemander à un collègue.</p>
+ </div>
+
+ <div class="case-line">
+ <span class="tag">Solution</span>
+ <p>Une question, une réponse sourcée, immédiatement, et un aveu honnête
+ quand l'information n'existe pas, <br>plutôt qu'une réponse inventée.</p>
+ </div>
+
+ <div class="case-arch">
+ Pensé pour les volumes de documentation d'une PME, scalable vers une
+ architecture vectorielle au-delà de quelques centaines de documents.
+ </div>
+
+ <div class="sectors">
+ <span class="pill">Support client</span>
+ <span class="pill">RH</span>
+ <span class="pill">Onboarding</span>
+ <span class="pill">Commercial</span>
+ </div>
+ </div>
+
+ <div class="case-media">
+ <div class="video-frame" onclick="openVideoLightbox(this, 'Knowledge Assistant')" role="button" tabindex="0">
+ <video class="video-thumb" muted playsinline preload="metadata">
+ <source src="assets/videos/3.mp4" type="video/mp4">
+ </video>
+ <div class="play-dot-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Case 4 - Reporting -->
+ <div class="case reverse">
+ <div class="case-node"></div>
+ <div class="case-copy">
+ <span class="case-eyebrow eyebrow">04 · Evaluer</span>
+ <h3>Des données brutes à la recommandation argumentée</h3>
+
+ <div class="case-line problem">
+ <span class="tag">Problème</span>
+ <p>Le reporting hebdomadaire est manuel, chronophage, et arrive toujours
+ après que les décisions auraient dû être prises.</p>
+ </div>
+
+ <div class="case-line">
+ <span class="tag">Solution</span>
+ <p>Les indicateurs sont calculés avec exactitude, puis interprétés par
+ l'IA, avec évolutions, points d'attention et recommandations générés chaque semaine.</p>
+ </div>
+
+ <div class="case-arch">
+ Les chiffres ne sont jamais générés par le modèle, seule leur interprétation
+ l'est. Aucun risque de statistique inventée dans un rapport de direction.
+ </div>
+
+ <div class="sectors">
+ <span class="pill">Ventes</span>
+ <span class="pill">Marketing</span>
+ <span class="pill">Support</span>
+ <span class="pill">Production</span>
+ </div>
+ </div>
+
+ <div class="case-media">
+ <div class="video-frame" onclick="openVideoLightbox(this, 'Reporting Automatique')" role="button" tabindex="0">
+ <video class="video-thumb" muted playsinline preload="metadata">
+ <source src="assets/videos/4.mp4" type="video/mp4">
+ </video>
+ <div class="play-dot-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+ </div>
+ </div>
+ </div>
+
+ <!-- Case 5 - AI Agent -->
+ <div class="case">
+ <div class="case-node"></div>
+ <div class="case-copy">
+ <span class="case-eyebrow eyebrow">05 · Agir</span>
+ <h3>Une instruction en langage naturel, une action vérifiée</h3>
+
+ <div class="case-line problem">
+ <span class="tag">Problème</span>
+ <p>Une tâche simple (relancer un prospect, créer un suivi) prend souvent
+ plus de temps à saisir dans le CRM qu'à décider.</p>
+ </div>
+
+ <div class="case-line">
+ <span class="tag">Solution</span>
+ <p>Une instruction en langage naturel devient une action réelle, mais
+ seulement après vérification de l'existence de la donnée concernée.</p>
+ </div>
+
+ <div class="case-arch">
+ Un plan d'action structuré, exécuté de façon déterministe, pensé pour la
+ fiabilité en démonstration, pas pour l'autonomie à tout prix.
+ </div>
+
+ <div class="sectors">
+ <span class="pill">Commercial</span>
+ <span class="pill">Opérations</span>
+ <span class="pill">Service client</span>
+ </div>
+ </div>
+
+ <div class="case-media">
+ <div class="video-frame" onclick="openVideoLightbox(this, 'AI Agent')" role="button" tabindex="0">
+ <video class="video-thumb" muted playsinline preload="metadata">
+ <source src="assets/videos/5.mp4" type="video/mp4">
+ </video>
+ <div class="play-dot-overlay"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ STACK ============ -->
+ <section class="stack">
+ <div class="wrap">
+ <span class="eyebrow stack-label">Architecture</span>
+ <div class="stack-items">
+ <span>n8n</span>
+ <span>Airtable</span>
+ <span>Claude API</span>
+ <span>Human-in-the-loop</span>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ CLOSING ============ -->
+ <section class="closing" id="closing">
+ <div class="wrap">
+ <img class="closing-icon" src="assets/orhia-icon.webp" alt="" width="700" height="708">
+ <h2><span class="line-atom">Un vrai système complet,</span><br><span class="line-atom">pensé pour <em>votre</em> activité.</span></h2>
+ </div>
+ </section>
+
+ <footer>
+ © ORHIA SYSTEMS · HUMAN-CENTERED AI ORCHESTRATION
+ <a class="legal-footer-link" href="mentions-legales.html">Mentions légales</a>
+ </footer>
+
+ </div><!-- /#page-real -->
+
+ <div id="page-contact">
+
+ <!-- ============ CONTACT ============ -->
+ <section class="contact-panel" id="contact">
+ <div class="wrap contact-wrap">
+ <span class="eyebrow">Contact</span>
+ <h2><span class="line-atom">Discutons de votre projet.</span></h2>
+ <p class="contact-lede">
+ Un process à digitaliser, un outil interne à créer, une automatisation à mettre en place&nbsp;?
+ Décrivez-nous votre besoin, nous revenons vers vous rapidement.
+ </p>
+
+ <div class="contact-form-shell">
+ <iframe data-tally-src="https://tally.so/embed/81DY7k?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+ loading="lazy"
+ width="100%"
+ height="896"
+ frameborder="0"
+ marginheight="0"
+ marginwidth="0"
+ title="Nous contacter"></iframe>
+ </div>
+ </div>
+ </section>
+
+ <footer>
+ &copy; ORHIA SYSTEMS &middot; HUMAN-CENTERED AI ORCHESTRATION
+ <a class="legal-footer-link" href="mentions-legales.html">Mentions légales</a>
+ </footer>
+
+ </div><!-- /#page-contact -->
+ </div><!-- /#stage -->
+
+ </main>
+
+ <div id="video-lightbox" class="video-lightbox" aria-hidden="true">
+ <div class="video-lightbox-backdrop" onclick="closeVideoLightbox()"></div>
+ <div class="video-lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="video-lightbox-title">
+ <div class="video-lightbox-head">
+ <span id="video-lightbox-title">Démo vidéo</span>
+ <button class="video-lightbox-close" onclick="closeVideoLightbox()" aria-label="Fermer">&times;</button>
+ </div>
+ <div id="video-lightbox-body" class="video-lightbox-body"></div>
+ </div>
+ </div>
+
+<script>
+(function () {
+  function switchPage(to) {
+    var btnReal = document.getElementById('btn-real');
+    var btnContact = document.getElementById('btn-contact');
+    var currentlyOn = btnReal.className.indexOf('btn-primary') !== -1 ? 'real' : 'contact';
+
+    // Already on this page: just scroll to the content, no point replaying the curtain.
+    if (to === currentlyOn) {
+      var anchorId = to === 'contact' ? 'contact' : 'studies';
+      var target = document.getElementById(anchorId);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    var cL = document.getElementById('curtain-l');
+    var cR = document.getElementById('curtain-r');
+    var pageReal = document.getElementById('page-real');
+    var pageContact = document.getElementById('page-contact');
+
+    cL.classList.add('animating', 'closed');
+    cR.classList.add('animating', 'closed');
+
+    setTimeout(function () {
+      if (to === 'contact') {
+        pageReal.style.display = 'none';
+        pageContact.style.display = 'block';
+        btnReal.className = 'btn btn-ghost';
+        btnContact.className = 'btn btn-primary';
+      } else {
+        pageReal.style.display = 'block';
+        pageContact.style.display = 'none';
+        btnReal.className = 'btn btn-primary';
+        btnContact.className = 'btn btn-ghost';
+      }
+      cL.classList.remove('closed');
+      cR.classList.remove('closed');
+      setTimeout(function () {
+        cL.classList.remove('animating');
+        cR.classList.remove('animating');
+      }, 460);
+    }, 480);
+  }
+  window.switchPage = switchPage;
+})();
+</script>
+
+<script>
+(function () {
+  function openVideoLightbox(frameEl, title) {
+    var lightbox = document.getElementById('video-lightbox');
+    var titleEl = document.getElementById('video-lightbox-title');
+    var bodyEl = document.getElementById('video-lightbox-body');
+
+    titleEl.textContent = 'Démo vidéo · ' + title;
+
+    // Clone whatever is inside the clicked video-frame (a real <video> now,
+    // or an iframe if a video is embedded from Loom/YouTube instead).
+    bodyEl.innerHTML = '';
+    var clone = frameEl.querySelector('.video-thumb, .video-placeholder, iframe, video');
+    if (clone) {
+      var lightboxMedia = clone.cloneNode(true);
+      if (lightboxMedia.tagName === 'VIDEO') {
+        lightboxMedia.removeAttribute('class');
+        lightboxMedia.controls = true;
+        lightboxMedia.muted = false;
+        lightboxMedia.autoplay = true;
+        lightboxMedia.style.objectFit = 'contain';
+        lightboxMedia.style.background = '#000';
+      }
+      bodyEl.appendChild(lightboxMedia);
+    }
+
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoLightbox() {
+    var lightbox = document.getElementById('video-lightbox');
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.getElementById('video-lightbox-body').innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeVideoLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && document.activeElement.classList.contains('video-frame')) {
+      e.preventDefault();
+      document.activeElement.click();
+    }
+  });
+
+  window.openVideoLightbox = openVideoLightbox;
+  window.closeVideoLightbox = closeVideoLightbox;
+})();
+</script>
+
+<script>
+var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+</script>
+
+</body>
+</html>

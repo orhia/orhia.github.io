@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orhia Systems | Le métier de Product Builder</title>
+<meta name="description" content="Qu'est-ce qu'un Product Builder ? Définition, méthode et positionnement d'un métier récent, au carrefour du business, de la technique et du no-code.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orhia Systems | Le métier de Product Builder">
+<meta property="og:description" content="Qu'est-ce qu'un Product Builder ? Définition, méthode et positionnement d'un métier récent, au carrefour du business, de la technique et du no-code.">
+<meta property="og:image" content="assets/orhia-lockup.webp">
+<meta property="og:url" content="https://orhia.systems/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orhia Systems | Le métier de Product Builder">
+<meta name="twitter:description" content="Qu'est-ce qu'un Product Builder ? Définition, méthode et positionnement d'un métier récent, au carrefour du business, de la technique et du no-code.">
+<meta name="twitter:image" content="assets/orhia-lockup.webp">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+
+ :root {
+ /* Dark palette (hero only) */
+ --navy-deep: #010816;
+ --navy: #0c1928;
+ --navy-panel: #0f1e32;
+ --steel-100: #f3f5f7;
+ --steel-300: #c7ced8;
+ --steel-500: #8a94a3;
+ --steel-700: #4d5665;
+ --gold: #c6a15b;
+ --gold-bright: #e2c07e;
+ --gold-dim: #7a6534;
+ --hairline: rgba(198, 161, 91, 0.18);
+ --hairline-soft: rgba(199, 206, 216, 0.1);
+
+ /* Light palette (rest of the site) */
+ --light-bg: #d2dced;
+ --panel: #ffffff;
+ --panel-alt: #e9edf3;
+ --ink: #142338;
+ --ink-muted: #55606f;
+ --ink-faint: #8993a3;
+ --gold-ink: #8a6423;
+ --hairline-light: rgba(16, 31, 51, 0.12);
+ --hairline-gold-light: rgba(198, 161, 91, 0.5);
+ }
+
+ * { box-sizing: border-box; }
+
+ html { scroll-behavior: smooth; font-size: 106.25%; }
+
+ body {
+ margin: 0;
+ background: var(--light-bg);
+ color: var(--ink-muted);
+ font-family: 'Manrope', sans-serif;
+ font-weight: 400;
+ line-height: 1.65;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+ }
+
+ a { color: inherit; }
+
+ h1, h2, h3 {
+ font-family: 'Cinzel', serif;
+ font-weight: 500;
+ color: var(--ink);
+ margin: 0;
+ text-wrap: balance;
+ }
+
+ .hero-statement {
+ text-wrap: balance;
+ }
+
+ .hero-sub,
+ .manifesto-inline,
+ .metier-intro p,
+ .metier-block-head p,
+ .metier-lede,
+ .case-line p,
+ .card p,
+ .highlight-box,
+ .closing p {
+ text-wrap: pretty;
+ }
+
+ .eyebrow {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--ink-muted);
+ font-weight: 600;
+ }
+
+ .wrap {
+ max-width: 1120px;
+ margin: 0 auto;
+ padding: 0 32px;
+ }
+
+ ::selection { background: var(--gold-dim); color: #fff; }
+
+ a:focus-visible, button:focus-visible {
+ outline: 2px solid var(--gold-ink);
+ outline-offset: 3px;
+ }
+
+ .skip-link {
+ position: absolute;
+ left: -9999px;
+ top: 0;
+ background: var(--panel);
+ color: var(--ink);
+ padding: 12px 20px;
+ z-index: 1000;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.85rem;
+ text-decoration: none;
+ border-radius: 0 0 3px 0;
+ }
+
+ .skip-link:focus {
+ left: 0;
+ }
+
+ /* ---------- background texture (light sections) ---------- */
+ body {
+ background-image:
+ radial-gradient(ellipse 900px 500px at 15% -5%, rgba(198,161,91,0.07), transparent 60%),
+ radial-gradient(ellipse 700px 500px at 90% 12%, rgba(16,31,51,0.035), transparent 60%);
+ background-repeat: no-repeat;
+ }
+
+ /* ---------- HERO (stays dark) ---------- */
+ .hero {
+ position: relative;
+ padding: 88px 0 120px;
+ text-align: center;
+ background: var(--navy-deep);
+ color: var(--steel-300);
+ border-bottom: 1px solid var(--hairline);
+ overflow: hidden;
+ }
+
+ .hero-lockup-wrap {
+ max-width: 620px;
+ margin: 0 auto 12px;
+ padding: 0 24px;
+ box-sizing: border-box;
+ }
+
+ .hero-lockup {
+ width: 100%;
+ height: auto;
+ display: block;
+ margin: 0;
+ }
+
+ .hero-statement {
+ font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+ line-height: 1.28;
+ max-width: 780px;
+ margin: 48px auto 24px;
+ letter-spacing: 0.01em;
+ color: var(--steel-100);
+ }
+
+ .hero-statement em {
+ font-style: normal;
+ color: var(--gold-bright);
+ }
+
+ .hero-sub {
+ max-width: 560px;
+ margin: 0 auto 40px;
+ color: var(--steel-500);
+ font-size: 1.08rem;
+ }
+
+ .underline-accent {
+ text-decoration: underline;
+ text-decoration-color: var(--gold);
+ text-decoration-thickness: 1px;
+ text-underline-offset: 4px;
+ }
+
+ .cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+ .btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 13px 26px;
+ border-radius: 8px;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.84rem;
+ letter-spacing: 0.06em;
+ text-decoration: none;
+ border: 1px solid var(--hairline);
+ transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+ }
+
+ .btn-primary {
+ background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+ color: var(--navy-deep);
+ border-color: transparent;
+ font-weight: 600;
+ }
+ .btn-primary:hover { filter: brightness(1.08); }
+
+ .btn-ghost { color: var(--steel-300); }
+ .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+ /* ---------- MANIFESTO ---------- */
+ .manifesto-inline {
+ max-width: 700px;
+ margin: 0 auto 72px;
+ font-size: 1.24rem;
+ color: var(--ink-muted);
+ line-height: 1.68;
+ text-align: center;
+ }
+
+ .manifesto-inline strong { color: var(--ink); font-weight: 700; }
+
+ /* ---------- CASE STUDIES SPINE ---------- */
+ .studies {
+ position: relative;
+ padding: 100px 0 60px;
+ }
+
+ .studies-head {
+ text-align: center;
+ margin-bottom: 88px;
+ }
+
+ .studies-head h2 {
+ font-size: clamp(1.5rem, 2.6vw, 2rem);
+ margin-top: 10px;
+ }
+
+ .spine {
+ position: relative;
+ max-width: 980px;
+ margin: 0 auto;
+ }
+
+ .spine::before {
+ content: "";
+ position: absolute;
+ left: 50%;
+ top: 8px;
+ bottom: 8px;
+ width: 1px;
+ background: linear-gradient(180deg, transparent, var(--hairline-gold-light) 8%, var(--hairline-gold-light) 92%, transparent);
+ transform: translateX(-50%);
+ }
+
+ .case {
+ position: relative;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 0 72px;
+ margin-bottom: 104px;
+ }
+
+ .case:last-child { margin-bottom: 0; }
+
+ .case-node {
+ position: absolute;
+ left: 50%;
+ top: 6px;
+ width: 11px;
+ height: 11px;
+ border-radius: 50%;
+ background: var(--light-bg);
+ border: 2px solid var(--gold-ink);
+ transform: translateX(-50%);
+ box-shadow: 0 0 0 6px var(--light-bg), 0 0 14px rgba(198,161,91,0.4);
+ }
+
+ .case-copy { grid-column: 1; grid-row: 1; text-align: right; padding-right: 8px; }
+ .case-media { grid-column: 2; grid-row: 1; padding-left: 8px; }
+
+ .case.reverse .case-copy { grid-column: 2; grid-row: 1; text-align: left; padding-right: 0; padding-left: 8px; }
+ .case.reverse .case-media { grid-column: 1; grid-row: 1; padding-left: 0; padding-right: 8px; }
+
+ .case-eyebrow {
+ display: block;
+ margin-bottom: 14px;
+ }
+
+ .case h3 {
+ font-size: 1.5rem;
+ margin-bottom: 18px;
+ line-height: 1.3;
+ }
+
+ .case-line {
+ margin: 0 0 14px;
+ font-size: 1.02rem;
+ }
+
+ .case-line .tag {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.7rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ color: var(--ink);
+ font-weight: 600;
+ display: block;
+ margin-bottom: 4px;
+ }
+
+ .case-line.problem .tag { color: var(--ink-muted); }
+ .case-line p { margin: 0; color: var(--ink-muted); }
+
+ .case-arch {
+ margin-top: 18px;
+ padding-top: 16px;
+ border-top: 1px solid var(--hairline-light);
+ font-size: 0.92rem;
+ color: var(--ink-muted);
+ font-style: normal;
+ }
+
+ .sectors {
+ margin-top: 18px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ justify-content: flex-end;
+ }
+
+ .case.reverse .sectors { justify-content: flex-start; }
+
+ .pill {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.72rem;
+ letter-spacing: 0.03em;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ border-radius: 20px;
+ padding: 4px 11px;
+ }
+
+ /* video frame */
+ .video-frame {
+ position: relative;
+ aspect-ratio: 16/10;
+ border: 1px solid var(--hairline-light);
+ background: var(--panel-alt);
+ border-radius: 14px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ }
+
+ .video-frame::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(135deg, rgba(198,161,91,0.08), transparent 55%);
+ }
+
+ .video-placeholder {
+ position: relative;
+ text-align: center;
+ color: var(--ink-muted);
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ }
+
+ .play-dot {
+ width: 46px;
+ height: 46px;
+ margin: 0 auto 14px;
+ border-radius: 50%;
+ border: 1px solid var(--hairline-gold-light);
+ background: var(--panel);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .play-dot svg { width: 14px; height: 14px; fill: var(--gold-ink); }
+
+ /* ---------- STACK STRIP ---------- */
+ .stack {
+ padding: 64px 0 88px;
+ text-align: center;
+ border-top: 1px solid var(--hairline-light);
+ }
+
+ .stack-label {
+ display: block;
+ margin-bottom: 20px;
+ }
+
+ .stack-items {
+ display: flex;
+ justify-content: center;
+ gap: 14px;
+ flex-wrap: wrap;
+ }
+
+ .stack-items span {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.86rem;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ padding: 7px 16px;
+ border-radius: 8px;
+ }
+
+ /* ---------- MÉTIER (Product Builder) ---------- */
+ .metier {
+ padding-bottom: 40px;
+ }
+
+ .metier-intro-band {
+ background: var(--navy-deep);
+ border-top: 1px solid var(--hairline);
+ border-bottom: 1px solid var(--hairline);
+ padding: 90px 0;
+ }
+
+ .metier-intro {
+ text-align: center;
+ max-width: 760px;
+ margin: 0 auto;
+ }
+
+ .metier-intro h1 {
+ font-size: clamp(1.6rem, 3vw, 2.2rem);
+ margin: 12px 0 22px;
+ line-height: 1.3;
+ color: var(--steel-100);
+ }
+
+ .metier-intro p {
+ font-size: 1.1rem;
+ color: var(--steel-500);
+ }
+
+ .metier-intro .eyebrow {
+ color: var(--gold-bright);
+ }
+
+ .metier .wrap > .metier-block:first-child {
+ margin-top: 90px;
+ }
+
+ .metier-block {
+ max-width: 980px;
+ margin: 0 auto 96px;
+ }
+
+ .metier-block-head { margin-bottom: 32px; }
+
+ .metier-block-head h3 {
+ font-size: 1.35rem;
+ margin-top: 10px;
+ line-height: 1.35;
+ }
+
+ .metier-block-head p {
+ margin-top: 14px;
+ color: var(--ink-muted);
+ font-size: 1.02rem;
+ max-width: 640px;
+ }
+
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 18px;
+ }
+
+ .card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+ .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+ .card {
+ border: 1px solid var(--hairline-light);
+ border-radius: 10px;
+ padding: 24px 22px;
+ background: var(--panel);
+ }
+
+ .card h4 {
+ font-family: 'Manrope', sans-serif;
+ font-weight: 700;
+ color: var(--ink);
+ font-size: 1.02rem;
+ margin: 0 0 10px;
+ }
+
+ .card p {
+ margin: 0;
+ font-size: 0.97rem;
+ color: var(--ink-muted);
+ line-height: 1.62;
+ }
+
+ .metier-lede {
+ text-align: center;
+ max-width: 640px;
+ margin: 0 auto 36px;
+ font-size: 1.02rem;
+ color: var(--ink-muted);
+ }
+
+ .highlight-box {
+ max-width: 980px;
+ margin: 28px auto 0;
+ border: 1px solid var(--hairline-light);
+ border-left: 2px solid var(--gold-ink);
+ background: rgba(198,161,91,0.07);
+ padding: 20px 26px;
+ font-size: 1rem;
+ color: var(--ink-muted);
+ border-radius: 8px;
+ }
+
+ .highlight-box strong { color: var(--ink); }
+
+ .method-steps {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 0;
+ flex-wrap: wrap;
+ margin-bottom: 28px;
+ }
+
+ .method-step {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ padding: 14px 26px;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.86rem;
+ letter-spacing: 0.04em;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ border-radius: 24px;
+ margin: 6px;
+ }
+
+ .method-step .num { color: var(--gold-ink); }
+
+ .method-arrow { color: var(--ink-faint); font-size: 1rem; }
+
+ .compare-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 18px;
+ margin-bottom: 20px;
+ }
+
+ .missions-lists {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 32px;
+ margin-bottom: 28px;
+ }
+
+ .missions-lists h4 {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ color: var(--ink);
+ font-weight: 600;
+ margin: 0 0 16px;
+ }
+
+ .missions-lists ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ }
+
+ .missions-lists li {
+ position: relative;
+ padding-left: 18px;
+ margin-bottom: 12px;
+ font-size: 1rem;
+ color: var(--ink-muted);
+ line-height: 1.6;
+ }
+
+ .missions-lists li::before {
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 9px;
+ width: 5px;
+ height: 5px;
+ background: var(--gold-ink);
+ border-radius: 50%;
+ }
+
+ .timeframes {
+ max-width: 640px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 18px;
+ }
+
+ .timeframe {
+ border: 1px solid var(--hairline-light);
+ background: var(--panel);
+ padding: 22px 20px;
+ text-align: center;
+ border-radius: 10px;
+ }
+
+ .timeframe .tf-num {
+ font-family: 'Cinzel', serif;
+ font-weight: 600;
+ color: var(--gold-ink);
+ font-size: 1.35rem;
+ display: block;
+ margin-bottom: 8px;
+ }
+
+ .timeframe .tf-label {
+ font-size: 0.92rem;
+ color: var(--ink-muted);
+ }
+
+ @media (max-width: 760px) {
+ .metier { padding-bottom: 20px; }
+ .metier-intro-band { padding: 64px 0; }
+ .metier .wrap > .metier-block:first-child { margin-top: 64px; }
+ .metier-block { margin-bottom: 72px; }
+ .card-grid, .card-grid.cols-4, .card-grid.cols-2, .compare-grid, .missions-lists, .timeframes {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ /* ---------- CLOSING ---------- */
+ .closing {
+ padding: 110px 0;
+ text-align: center;
+ background: var(--navy-deep);
+ color: var(--steel-300);
+ border-top: 1px solid var(--hairline);
+ }
+
+ .closing-icon {
+ width: 64px;
+ height: auto;
+ opacity: 0.9;
+ margin: 0 auto 32px;
+ display: block;
+ }
+
+ .closing h2 {
+ font-size: clamp(1.4rem, 2.6vw, 2rem);
+ max-width: 960px;
+ margin: 0 auto 20px;
+ line-height: 1.35;
+ color: var(--steel-100);
+ }
+
+ .closing h2 em {
+ font-style: normal;
+ color: var(--gold-bright);
+ }
+
+ .closing p {
+ max-width: 480px;
+ margin: 0 auto;
+ color: var(--steel-500);
+ font-size: 1.02rem;
+ }
+
+ /* ---------- FOOTER ---------- */
+ footer {
+ padding: 32px;
+ text-align: center;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.05em;
+ color: var(--ink-muted);
+ border-top: 1px solid var(--hairline);
+ }
+
+ footer .legal-footer-link {
+ display: block;
+ margin-top: 10px;
+ color: var(--ink-faint);
+ text-decoration: none;
+ }
+
+ footer .legal-footer-link:hover {
+ color: var(--gold-ink);
+ text-decoration: underline;
+ }
+
+ /* ---------- RESPONSIVE ---------- */
+ @media (max-width: 760px) {
+ .hero { padding: 72px 0 90px; }
+ .studies { padding: 72px 0 40px; }
+ .studies-head { margin-bottom: 56px; }
+
+ .spine::before { left: 17px; }
+
+ .case, .case.reverse {
+ grid-template-columns: 1fr;
+ gap: 24px;
+ margin-bottom: 72px;
+ padding-left: 44px;
+ }
+
+ .case-copy, .case.reverse .case-copy,
+ .case-media, .case.reverse .case-media {
+ grid-column: 1;
+ grid-row: auto;
+ text-align: left;
+ padding: 0;
+ }
+
+ .case-node { left: 17px; }
+
+ .sectors, .case.reverse .sectors { justify-content: flex-start; }
+
+ .closing { padding: 80px 0; }
+ }
+
+ /* ---- curtain navigation ---- */
+ #curtain-l,#curtain-r {
+   position:fixed;
+   top:0;bottom:0;
+   width:50%;
+   background:var(--navy-deep);
+   z-index:9999;
+   pointer-events:none;
+ }
+ #curtain-l{left:0;transform:translateX(-100%);}
+ #curtain-r{right:0;transform:translateX(100%);}
+ #curtain-l.animating,#curtain-r.animating{
+   transition:transform .45s cubic-bezier(.65,0,.35,1);
+ }
+ #curtain-l.closed{transform:translateX(0);}
+ #curtain-r.closed{transform:translateX(0);}
+ #page-metier{display:none;}
+
+ .back-bar {
+ padding: 22px 32px;
+ border-bottom: 1px solid var(--hairline-light);
+ }
+
+ .back-link {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.82rem;
+ letter-spacing: 0.04em;
+ color: var(--ink-muted);
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ }
+
+ .back-link:hover { color: var(--gold-ink); }
+
+</style>
+</head>
+<body>
+ <a href="#main" class="skip-link">Aller au contenu</a>
+
+ <div class="back-bar">
+ <div class="wrap">
+ <a class="back-link" href="index.html">&larr; Retour a Orhia Systems</a>
+ </div>
+ </div>
+
+ <main id="main">
+ <section class="metier" id="metier">
+
+ <div class="metier-intro-band">
+ <div class="wrap">
+ <div class="metier-intro">
+ <span class="eyebrow">Le métier</span>
+ <h1>Qu'est-ce qu'un Product Builder ?</h1>
+ <p>
+ Le Product Builder est une sorte de "Product Manager augmenté". Il conçoit <em style="color:var(--gold-bright); font-style:normal;">et</em> fabrique
+ des produits numériques. Ni développeur qui exécute sans vision produit, ni chef de produit qui définit
+ sans construire lui-même, ni consultant qui diagnostique puis s'en va. <br>Sa place est à l'intersection du
+ business, de la technique et de l'expérience utilisateur. <br>Sa mission&nbsp;: transformer un vrai besoin
+ métier en outil qui fonctionne rapidement, <br>sans complexité inutile, et pensé pour les personnes qui
+ s'en serviront chaque jour.
+ </p>
+ </div>
+ </div>
+ </div>
+
+ <div class="wrap">
+
+ <!-- Bloc : la question -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">La question qu'on se pose souvent</span>
+ <h3>Un besoin bien réel, encore faut-il savoir à qui le confier</h3>
+ </div>
+ <div class="card-grid">
+ <div class="card">
+ <h4>Une idée à concrétiser</h4>
+ <p>Vous savez précisément ce que vous voulez construire, mais pas comment le faire exister
+ rapidement, faute de ressources techniques disponibles.</p>
+ </div>
+ <div class="card">
+ <h4>Un processus à automatiser</h4>
+ <p>Vos équipes répètent chaque semaine les mêmes tâches manuelles, des tâches qui pourraient
+ très bien tourner seules.</p>
+ </div>
+ <div class="card">
+ <h4>Un outil qui manque en interne</h4>
+ <p>Personne n'a le temps ni les moyens de construire l'outil sur mesure dont vous auriez besoin
+ , et certainement pas dans les six prochains mois.</p>
+ </div>
+ </div>
+ <p class="metier-lede" style="margin-top:28px;">
+ Ce qu'il vous faut&nbsp;: quelqu'un qui comprend vraiment votre métier, capable de traduire ce besoin
+ en solution concrète, et de la livrer sans faire traîner les choses.
+ </p>
+ </div>
+
+ <!-- Bloc : approche -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Ce qui compte vraiment</span>
+ <h3>Une méthode, avant les outils</h3>
+ </div>
+ <div class="card-grid cols-4">
+ <div class="card">
+ <h4>Le problème avant la stack</h4>
+ <p>Avant de toucher à un seul outil, comprendre l'activité, les contraintes et les utilisateurs.
+ Ce qui est construit répond à un vrai besoin, jamais une vitrine technologique.</p>
+ </div>
+ <div class="card">
+ <h4>Un produit livré, pas un rapport</h4>
+ <p>À la fin, quelque chose de concret et utilisable dès le premier jour, pas un document de
+ 40 pages qui reste dans un tiroir.</p>
+ </div>
+ <div class="card">
+ <h4>Des cycles courts, grâce au no-code</h4>
+ <p>Un premier prototype en quelques jours, mis entre les mains de vrais utilisateurs, puis
+ ajusté, fini les chantiers de 12 mois déconnectés du besoin réel.</p>
+ </div>
+ <div class="card">
+ <h4>Trois langages, un seul discours</h4>
+ <p>Celui du métier, celui du design, celui de la technique, pour éviter les malentendus qui
+ font dérailler la plupart des projets numériques.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Bloc : IA -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Intégration de l'IA</span>
+ <h3>Où l'intelligence artificielle intervient concrètement</h3>
+ <p style="margin-left:auto; margin-right:auto;">
+ Jamais plaquée après-coup, elle infuse chaque étape du travail, uniquement là où elle apporte
+ une vraie valeur.
+ </p>
+ </div>
+ <div class="card-grid cols-4">
+ <div class="card">
+ <h4>En phase de cadrage</h4>
+ <p>Dépouiller de gros volumes de retours utilisateurs, synthétiser des entretiens, faire émerger
+ un premier backlog structuré à partir d'un cahier des charges.</p>
+ </div>
+ <div class="card">
+ <h4>Dans les automatisations</h4>
+ <p>Claude ou Mistral AI pour trier des données entrantes, générer des résumés, déclencher des
+ actions, branchés directement dans n8n ou Make.</p>
+ </div>
+ <div class="card">
+ <h4>Dans les outils internes</h4>
+ <p>Un assistant de saisie guidée, un moteur de recommandation, un agent qui pré-remplit un
+ formulaire à partir d'une note vocale.</p>
+ </div>
+ <div class="card">
+ <h4>Dans les applications métier</h4>
+ <p>Des plateformes comme Glide embarquent nativement des capacités IA (résumé, extraction,
+ classification) sans écrire une ligne de code.</p>
+ </div>
+ </div>
+ <div class="highlight-box">
+ Ce que l'IA change concrètement, c'est la vitesse pour passer d'un tas de données à une décision.
+ Mais elle n'apporte cette valeur que si les données sont bien structurées en amont, précisément
+ le travail qu'accomplit un Product Builder, avant même que l'IA n'entre en jeu.
+ </div>
+ </div>
+
+ <!-- Bloc : méthode -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Méthode de travail</span>
+ <h3>Comment ça se déroule, en pratique</h3>
+ </div>
+ <div class="method-steps">
+ <div class="method-step"><span class="num">01</span> Cadrage</div>
+ <span class="method-arrow">→</span>
+ <div class="method-step"><span class="num">02</span> Prototype</div>
+ <span class="method-arrow">→</span>
+ <div class="method-step"><span class="num">03</span> Itération</div>
+ </div>
+ <p class="metier-lede">
+ Sur de nombreux projets, cette approche permet de livrer un outil de gestion sur mesure en
+ quelques semaines, là où un développement classique aurait demandé des mois, et un budget hors
+ d'atteinte.
+ </p>
+ </div>
+
+ <!-- Bloc : pour qui -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Pour qui</span>
+ <h3>Des besoins concrets, à toutes les échelles</h3>
+ </div>
+ <div class="card-grid cols-4">
+ <div class="card">
+ <h4>PME</h4>
+ <p>Digitaliser des opérations sans monter une équipe technique : suivi client, gestion de stock,
+ onboarding, reporting automatisé.</p>
+ </div>
+ <div class="card">
+ <h4>Startups</h4>
+ <p>Valider un MVP rapidement sans épuiser sa trésorerie, et s'appuyer sur du concret pour
+ convaincre des investisseurs.</p>
+ </div>
+ <div class="card">
+ <h4>Grandes entreprises & Innovation Labs</h4>
+ <p>Avancer sur des enjeux techniques, métiers et organisationnels : recherche, transformation
+ digitale, structuration de dispositifs internes.</p>
+ </div>
+ <div class="card">
+ <h4>Agences & indépendants</h4>
+ <p>Automatiser ses propres process, se doter d'outils internes, intégrer l'IA à son offre sans
+ dépendre d'une ressource technique externe.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Bloc : positionnement -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Positionnement</span>
+ <h3>Face aux autres profils</h3>
+ </div>
+ <div class="compare-grid">
+ <div class="card">
+ <h4>Développeur classique</h4>
+ <p>Construit ce qu'on lui demande, sans nécessairement porter la vision produit ni l'expertise
+ UX pour piloter l'ensemble.</p>
+ </div>
+ <div class="card">
+ <h4>Product Manager</h4>
+ <p>Définit la vision et priorise, mais ne construit pas lui-même, et dépend d'une équipe
+ d'exécution.</p>
+ </div>
+ <div class="card">
+ <h4>Consultant IT</h4>
+ <p>Pose un diagnostic, formule des recommandations, puis s'en va, sans garantie que l'outil
+ soit vraiment adopté.</p>
+ </div>
+ </div>
+ <div class="highlight-box" style="text-align:center;">
+ Le Product Builder couvre l'ensemble de ces rôles, <strong>de la vision jusqu'à l'exécution.</strong>
+ </div>
+ </div>
+
+ <!-- Bloc : missions & bénéfices -->
+ <div class="metier-block">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Types de missions & bénéfices</span>
+ <h3>Ce qu'un Product Builder peut prendre en charge</h3>
+ </div>
+ <div class="missions-lists">
+ <div>
+ <h4>Automatisation de processus</h4>
+ <ul>
+ <li>Automatiser des tâches répétitives, construire des workflows</li>
+ <li>Concevoir des bots et assistants virtuels</li>
+ <li>Intégrer et structurer des bases de données</li>
+ <li>Mettre en place des alertes automatiques et fluidifier la communication interne</li>
+ </ul>
+ </div>
+ <div>
+ <h4>Création & développement</h4>
+ <ul>
+ <li>Applications internes ou web app sur mesure</li>
+ <li>Site web, application mobile, boutique en ligne, intégrations d'API</li>
+ <li>Tableaux de bord personnalisés et analyses prédictives</li>
+ </ul>
+ </div>
+ </div>
+ <div class="card-grid cols-2">
+ <div class="card">
+ <h4>Gain de temps & productivité</h4>
+ <p>Des applications construites rapidement grâce au no-code. Des tâches récurrentes automatisées,
+ avec moins de place pour l'erreur.</p>
+ </div>
+ <div class="card">
+ <h4>Flexibilité & agilité</h4>
+ <p>Des prototypes testés à moindre coût, des outils sur mesure capables d'évoluer avec vos
+ besoins, sans refonte lourde à chaque fois.</p>
+ </div>
+ </div>
+ <div class="highlight-box" style="text-align:center;">
+ Le no-code permet d'investir dans l'agilité et l'innovation de votre entreprise, sans les délais
+ ni les budgets d'un développement traditionnel.
+ </div>
+ </div>
+
+ <!-- Bloc : délais -->
+ <div class="metier-block" style="margin-bottom:0;">
+ <div class="metier-block-head" style="text-align:center;">
+ <span class="eyebrow">Passons à l'action</span>
+ <h3>Un projet à concrétiser ?</h3>
+ <p style="margin-left:auto; margin-right:auto;">
+ Un process à digitaliser, un outil interne à créer, un MVP à valider, une automatisation à
+ mettre en place : si vous cherchez quelqu'un qui comprenne à la fois votre activité et la
+ technique, c'est précisément ce que fait un Product Builder.
+ </p>
+ </div>
+ <div class="timeframes">
+ <div class="timeframe">
+ <span class="tf-num">2 – 6 semaines</span>
+ <span class="tf-label">Pour livrer un outil fonctionnel en no-code / low-code</span>
+ </div>
+ <div class="timeframe">
+ <span class="tf-num">3 – 9 mois</span>
+ <span class="tf-label">Pour un développement équivalent en code traditionnel</span>
+ </div>
+ </div>
+ </div>
+
+ </div>
+ </section>
+
+ <footer>
+ © ORHIA SYSTEMS · HUMAN-CENTERED AI ORCHESTRATION
+ <a class="legal-footer-link" href="mentions-legales.html">Mentions légales</a>
+ </footer>
+
+
+ </main>
+
+</body>
+</html>

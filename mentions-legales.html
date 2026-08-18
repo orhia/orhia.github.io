@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orhia Systems | Mentions légales</title>
+<meta name="description" content="Mentions légales du site Orhia Systems.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orhia Systems | Mentions légales">
+<meta property="og:description" content="Mentions légales du site Orhia Systems.">
+<meta property="og:image" content="assets/orhia-lockup.webp">
+<meta property="og:url" content="https://orhia.systems/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orhia Systems | Mentions légales">
+<meta name="twitter:description" content="Mentions légales du site Orhia Systems.">
+<meta name="twitter:image" content="assets/orhia-lockup.webp">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+
+ :root {
+ /* Dark palette (hero only) */
+ --navy-deep: #010816;
+ --navy: #0c1928;
+ --navy-panel: #0f1e32;
+ --steel-100: #f3f5f7;
+ --steel-300: #c7ced8;
+ --steel-500: #8a94a3;
+ --steel-700: #4d5665;
+ --gold: #c6a15b;
+ --gold-bright: #e2c07e;
+ --gold-dim: #7a6534;
+ --hairline: rgba(198, 161, 91, 0.18);
+ --hairline-soft: rgba(199, 206, 216, 0.1);
+
+ /* Light palette (rest of the site) */
+ --light-bg: #d2dced;
+ --panel: #ffffff;
+ --panel-alt: #e9edf3;
+ --ink: #142338;
+ --ink-muted: #55606f;
+ --ink-faint: #8993a3;
+ --gold-ink: #8a6423;
+ --hairline-light: rgba(16, 31, 51, 0.12);
+ --hairline-gold-light: rgba(198, 161, 91, 0.5);
+ }
+
+ * { box-sizing: border-box; }
+
+ html { scroll-behavior: smooth; font-size: 106.25%; }
+
+ body {
+ margin: 0;
+ background: var(--light-bg);
+ color: var(--ink-muted);
+ font-family: 'Manrope', sans-serif;
+ font-weight: 400;
+ line-height: 1.65;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+ }
+
+ a { color: inherit; }
+
+ h1, h2, h3 {
+ font-family: 'Cinzel', serif;
+ font-weight: 500;
+ color: var(--ink);
+ margin: 0;
+ text-wrap: balance;
+ }
+
+ .hero-statement {
+ text-wrap: balance;
+ }
+
+ .hero-sub,
+ .manifesto-inline,
+ .case-line p,
+ .contact-lede,
+ .closing p {
+ text-wrap: pretty;
+ }
+
+ .eyebrow {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--ink-muted);
+ font-weight: 600;
+ }
+
+ .wrap {
+ max-width: 1120px;
+ margin: 0 auto;
+ padding: 0 32px;
+ }
+
+ ::selection { background: var(--gold-dim); color: #fff; }
+
+ a:focus-visible, button:focus-visible {
+ outline: 2px solid var(--gold-ink);
+ outline-offset: 3px;
+ }
+
+ .skip-link {
+ position: absolute;
+ left: -9999px;
+ top: 0;
+ background: var(--panel);
+ color: var(--ink);
+ padding: 12px 20px;
+ z-index: 1000;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.85rem;
+ text-decoration: none;
+ border-radius: 0 0 3px 0;
+ }
+
+ .skip-link:focus {
+ left: 0;
+ }
+
+ /* ---------- background texture (light sections) ---------- */
+ body {
+ background-image:
+ radial-gradient(ellipse 900px 500px at 15% -5%, rgba(198,161,91,0.07), transparent 60%),
+ radial-gradient(ellipse 700px 500px at 90% 12%, rgba(16,31,51,0.035), transparent 60%);
+ background-repeat: no-repeat;
+ }
+
+ /* ---------- HERO (stays dark) ---------- */
+ .hero {
+ position: relative;
+ padding: 88px 0 120px;
+ text-align: center;
+ background: var(--navy-deep);
+ color: var(--steel-300);
+ border-bottom: 1px solid var(--hairline);
+ overflow: hidden;
+ }
+
+ .hero-lockup-wrap {
+ max-width: 620px;
+ margin: 0 auto 12px;
+ padding: 0 24px;
+ box-sizing: border-box;
+ }
+
+ .hero-lockup {
+ width: 100%;
+ height: auto;
+ display: block;
+ margin: 0;
+ }
+
+ .hero-statement {
+ font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+ line-height: 1.28;
+ max-width: 780px;
+ margin: 48px auto 24px;
+ letter-spacing: 0.01em;
+ color: var(--steel-100);
+ }
+
+ .hero-statement em {
+ font-style: normal;
+ color: var(--gold-bright);
+ }
+
+ .line-atom {
+ white-space: nowrap;
+ }
+
+ @media (max-width: 480px) {
+ .line-atom { white-space: normal; }
+ }
+
+ .hero-sub {
+ max-width: 560px;
+ margin: 0 auto 40px;
+ color: var(--steel-500);
+ font-size: 1.08rem;
+ }
+
+ .underline-accent {
+ text-decoration: underline;
+ text-decoration-color: var(--gold);
+ text-decoration-thickness: 1px;
+ text-underline-offset: 4px;
+ }
+
+ .cta-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+ .btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 13px 26px;
+ border-radius: 8px;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.84rem;
+ letter-spacing: 0.06em;
+ text-decoration: none;
+ border: 1px solid var(--hairline);
+ transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+ }
+
+ .btn-primary {
+ background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+ color: var(--navy-deep);
+ border-color: transparent;
+ font-weight: 600;
+ }
+ .btn-primary:hover { filter: brightness(1.08); }
+
+ .btn-ghost { color: var(--steel-300); }
+ .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+ /* ---------- MANIFESTO ---------- */
+ .manifesto-inline {
+ max-width: 700px;
+ margin: 0 auto 72px;
+ font-size: 1.24rem;
+ color: var(--ink-muted);
+ line-height: 1.68;
+ text-align: center;
+ }
+
+ .manifesto-inline strong { color: var(--ink); font-weight: 700; }
+
+ /* ---------- CASE STUDIES SPINE ---------- */
+ .studies {
+ position: relative;
+ padding: 100px 0 60px;
+ }
+
+ .studies-head {
+ text-align: center;
+ margin-bottom: 88px;
+ }
+
+ .studies-head h2 {
+ font-size: clamp(1.5rem, 2.6vw, 2rem);
+ margin-top: 10px;
+ }
+
+ .studies-disclaimer {
+ max-width: 560px;
+ margin: 22px auto 0;
+ font-size: 0.88rem;
+ font-style: italic;
+ color: var(--ink-muted);
+ line-height: 1.6;
+ text-wrap: pretty;
+ }
+
+ .spine {
+ position: relative;
+ max-width: 980px;
+ margin: 0 auto;
+ }
+
+ .spine::before {
+ content: "";
+ position: absolute;
+ left: 50%;
+ top: 8px;
+ bottom: 8px;
+ width: 1px;
+ background: linear-gradient(180deg, transparent, var(--hairline-gold-light) 8%, var(--hairline-gold-light) 92%, transparent);
+ transform: translateX(-50%);
+ }
+
+ .case {
+ position: relative;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 0 72px;
+ margin-bottom: 104px;
+ }
+
+ .case:last-child { margin-bottom: 0; }
+
+ .case-node {
+ position: absolute;
+ left: 50%;
+ top: 6px;
+ width: 11px;
+ height: 11px;
+ border-radius: 50%;
+ background: var(--light-bg);
+ border: 2px solid var(--gold-ink);
+ transform: translateX(-50%);
+ box-shadow: 0 0 0 6px var(--light-bg), 0 0 14px rgba(198,161,91,0.4);
+ }
+
+ .case-copy { grid-column: 1; grid-row: 1; text-align: right; padding-right: 8px; }
+ .case-media { grid-column: 2; grid-row: 1; padding-left: 8px; }
+
+ .case.reverse .case-copy { grid-column: 2; grid-row: 1; text-align: left; padding-right: 0; padding-left: 8px; }
+ .case.reverse .case-media { grid-column: 1; grid-row: 1; padding-left: 0; padding-right: 8px; }
+
+ .case-eyebrow {
+ display: block;
+ margin-bottom: 14px;
+ }
+
+ .case h3 {
+ font-size: 1.5rem;
+ margin-bottom: 18px;
+ line-height: 1.3;
+ }
+
+ .case-line {
+ margin: 0 0 14px;
+ font-size: 1.02rem;
+ }
+
+ .case-line .tag {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.7rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ color: var(--ink);
+ font-weight: 600;
+ display: block;
+ margin-bottom: 4px;
+ }
+
+ .case-line.problem .tag { color: var(--ink-muted); }
+ .case-line p { margin: 0; color: var(--ink-muted); }
+
+ .case-arch {
+ margin-top: 18px;
+ padding-top: 16px;
+ border-top: 1px solid var(--hairline-light);
+ font-size: 0.92rem;
+ color: var(--ink-muted);
+ font-style: normal;
+ }
+
+ .sectors {
+ margin-top: 18px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+ justify-content: flex-end;
+ }
+
+ .case.reverse .sectors { justify-content: flex-start; }
+
+ .pill {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.72rem;
+ letter-spacing: 0.03em;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ border-radius: 20px;
+ padding: 4px 11px;
+ }
+
+ /* video frame */
+ .video-frame {
+ position: relative;
+ aspect-ratio: 16/10;
+ border: 1px solid var(--hairline-light);
+ background: var(--panel-alt);
+ border-radius: 14px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ }
+
+ .video-frame::before {
+ content: "";
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(135deg, rgba(198,161,91,0.08), transparent 55%);
+ }
+
+ .video-placeholder {
+ position: relative;
+ text-align: center;
+ color: var(--ink-muted);
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ }
+
+ .play-dot {
+ width: 46px;
+ height: 46px;
+ margin: 0 auto 14px;
+ border-radius: 50%;
+ border: 1px solid var(--hairline-gold-light);
+ background: var(--panel);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .play-dot svg { width: 14px; height: 14px; fill: var(--gold-ink); }
+
+ /* ---------- STACK STRIP ---------- */
+ .stack {
+ padding: 64px 0 88px;
+ text-align: center;
+ border-top: 1px solid var(--hairline-light);
+ }
+
+ .stack-label {
+ display: block;
+ margin-bottom: 20px;
+ }
+
+ .stack-items {
+ display: flex;
+ justify-content: center;
+ gap: 14px;
+ flex-wrap: wrap;
+ }
+
+ .stack-items span {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.86rem;
+ color: var(--ink-muted);
+ background: var(--panel);
+ border: 1px solid var(--hairline-light);
+ padding: 7px 16px;
+ border-radius: 8px;
+ }
+
+ /* ---------- CLOSING ---------- */
+ .closing {
+ padding: 110px 0;
+ text-align: center;
+ background: var(--navy-deep);
+ color: var(--steel-300);
+ border-top: 1px solid var(--hairline);
+ }
+
+ .closing-icon {
+ width: 64px;
+ height: auto;
+ opacity: 0.9;
+ margin: 0 auto 32px;
+ display: block;
+ }
+
+ .closing h2 {
+ font-size: clamp(1.4rem, 2.6vw, 2rem);
+ max-width: 960px;
+ margin: 0 auto 20px;
+ line-height: 1.35;
+ color: var(--steel-100);
+ }
+
+ .closing h2 em {
+ font-style: normal;
+ color: var(--gold-bright);
+ }
+
+ .closing p {
+ max-width: 480px;
+ margin: 0 auto;
+ color: var(--steel-500);
+ font-size: 1.02rem;
+ }
+
+ /* ---------- CONTACT ---------- */
+ .contact-panel {
+ padding: 140px 0;
+ min-height: 60vh;
+ display: flex;
+ align-items: center;
+ }
+
+ .contact-wrap {
+ max-width: 640px;
+ margin: 0 auto;
+ text-align: center;
+ }
+
+ .contact-panel h2 {
+ font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+ margin: 14px 0 22px;
+ }
+
+ .contact-lede {
+ font-size: 1.08rem;
+ color: var(--ink-muted);
+ max-width: 520px;
+ margin: 0 auto 44px;
+ text-wrap: pretty;
+ }
+
+ .contact-form-shell {
+ border: 1px solid var(--hairline-light);
+ border-radius: 4px;
+ padding: 32px 24px;
+ background: var(--panel);
+ }
+
+ .contact-form-shell iframe {
+ display: block;
+ }
+
+ /* ---------- FOOTER ---------- */
+ footer {
+ padding: 32px;
+ text-align: center;
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.74rem;
+ letter-spacing: 0.05em;
+ color: var(--ink-muted);
+ border-top: 1px solid var(--hairline);
+ }
+
+ /* ---------- RESPONSIVE ---------- */
+ @media (max-width: 760px) {
+ .hero { padding: 72px 0 90px; }
+ .studies { padding: 72px 0 40px; }
+ .studies-head { margin-bottom: 56px; }
+
+ .spine::before { left: 17px; }
+
+ .case, .case.reverse {
+ grid-template-columns: 1fr;
+ gap: 24px;
+ margin-bottom: 72px;
+ padding-left: 44px;
+ }
+
+ .case-copy, .case.reverse .case-copy,
+ .case-media, .case.reverse .case-media {
+ grid-column: 1;
+ grid-row: auto;
+ text-align: left;
+ padding: 0;
+ }
+
+ .case-node { left: 17px; }
+
+ .sectors, .case.reverse .sectors { justify-content: flex-start; }
+
+ .closing { padding: 80px 0; }
+ }
+
+ /* ---- curtain navigation ---- */
+ #curtain-l,#curtain-r {
+   position:fixed;
+   top:0;bottom:0;
+   width:50%;
+   background:var(--navy-deep);
+   z-index:9999;
+   pointer-events:none;
+ }
+ #curtain-l{left:0;transform:translateX(-100%);}
+ #curtain-r{right:0;transform:translateX(100%);}
+ #curtain-l.animating,#curtain-r.animating{
+   transition:transform .45s cubic-bezier(.65,0,.35,1);
+ }
+ #curtain-l.closed{transform:translateX(0);}
+ #curtain-r.closed{transform:translateX(0);}
+ #page-contact{display:none;}
+
+ .legal-bar {
+ padding: 22px 32px;
+ border-bottom: 1px solid var(--hairline-light);
+ }
+
+ .back-link {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.82rem;
+ letter-spacing: 0.04em;
+ color: var(--ink-muted);
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ }
+
+ .back-link:hover { color: var(--gold-ink); }
+
+ .legal-content {
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 72px 32px 100px;
+ }
+
+ .legal-content h1 {
+ font-size: 1.8rem;
+ margin-bottom: 8px;
+ }
+
+ .legal-content .eyebrow {
+ display: block;
+ margin-bottom: 14px;
+ }
+
+ .legal-updated {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: 0.78rem;
+ color: var(--ink-faint);
+ margin-bottom: 56px;
+ }
+
+ .legal-block {
+ margin-bottom: 40px;
+ }
+
+ .legal-block h2 {
+ font-size: 1.05rem;
+ margin-bottom: 12px;
+ color: var(--ink);
+ }
+
+ .legal-block p {
+ font-size: 0.98rem;
+ color: var(--ink-muted);
+ line-height: 1.7;
+ margin: 0 0 8px;
+ }
+
+ .legal-block a {
+ color: var(--gold-ink);
+ text-decoration: underline;
+ text-decoration-color: var(--hairline-gold-light);
+ text-underline-offset: 3px;
+ }
+
+</style>
+</head>
+<body>
+ <a href="#main" class="skip-link">Aller au contenu</a>
+
+ <div class="legal-bar">
+ <div class="wrap">
+ <a class="back-link" href="index.html">&larr; Retour a Orhia Systems</a>
+ </div>
+ </div>
+
+ <main id="main">
+ <div class="legal-content">
+
+ <span class="eyebrow">Informations légales</span>
+ <h1>Mentions légales</h1>
+ <p class="legal-updated">Dernière mise à jour&nbsp;: août 2026</p>
+
+ <div class="legal-block">
+ <h2>Éditeur du site</h2>
+ <p>Jean-François Rousse</p>
+ <p>Activité indépendante en cours d'immatriculation (auto-entrepreneur)</p>
+ <p>Tarbes, France</p>
+ <p>Contact&nbsp;: via le <a href="index.html">formulaire de contact</a> du site</p>
+ </div>
+
+ <div class="legal-block">
+ <h2>Directeur de la publication</h2>
+ <p>Jean-François Rousse</p>
+ </div>
+
+ <div class="legal-block">
+ <h2>Hébergement</h2>
+ <p>GitHub Pages (GitHub, Inc.)</p>
+ <p>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</p>
+ </div>
+
+ <div class="legal-block">
+ <h2>Propriété intellectuelle</h2>
+ <p>L'ensemble des contenus de ce site (textes, visuels, identité de marque) est la propriété de Jean-François Rousse, sauf mention contraire.</p>
+ </div>
+
+ </div>
+ </main>
+
+</body>
+</html>
