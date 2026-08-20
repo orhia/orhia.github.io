@@ -51,7 +51,7 @@
 
  * { box-sizing: border-box; }
 
- html { scroll-behavior: smooth; font-size: 106.25%; }
+ html { scroll-behavior: smooth; font-size: 106.25%; overflow-x: hidden; }
 
  body {
  margin: 0;
@@ -61,6 +61,7 @@
  font-weight: 400;
  line-height: 1.65;
  -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
  }
 
  @media (prefers-reduced-motion: reduce) {
@@ -739,6 +740,15 @@
  .sectors, .case.reverse .sectors { justify-content: flex-start; }
 
  .closing { padding: 80px 0; }
+
+ .manifesto-inline {
+ left: 0;
+ max-width: 100%;
+ }
+
+ .manifesto-inline::before {
+ left: 0;
+ }
  }
 
  /* ---- curtain navigation ---- */
